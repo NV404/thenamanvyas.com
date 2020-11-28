@@ -28,7 +28,7 @@ $("input[name$='skill']").click(function () {
     $(".detail").html("<h2>Game development</h2><h2>Video games</h2><h2>New technologies</h2><h2>Music</h2><h2>Photography</h2>")
   }
   if (skillval == "languages") {
-    $(".detail").html("<h2>HTML</h2><h2>CSS</h2><h2>JavaScript</h2><h2>Python</h2><h2>PHP</h2><h2>C/C++</h2><h2>C#</h2><h2>C#</h2><h2>MySQL</h2>")
+    $(".detail").html('<img src="./html.png"/><img src="./css.png"/><img src="./js.png"/><img src="./python.png"/><img src="./php.png"/><img src="./cpp.png"/><img src="./cs.png"/><img src="./mysql.png"/>')
   }
 });
 
