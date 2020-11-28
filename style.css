@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+}
+.logo,.close{
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: 1%;
+  left: 1.5%;
+  background-image: url(./logo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50px;
+}
+.close{
+  left: 95%;
+  background-image: url(./close.svg);
+  background-size: 25px;
+  transition: all 0.5s;
+}
+.close:hover{
+  transform: rotate(90deg);
+}
+.main{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 4px;  
+}
+.main h1{
+  font-size: 5vw;
+}
+.main div{
+  background-color: black;
+  color: white;
+  padding: 7px;
+  font-size: 1vw;
+}
+.menu,.social{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 95%;
+}
+.menu a{
+  text-decoration: none;
+  font-size: 40px;
+  font-family: 'Roboto', sans-serif;
+  color: black;
+  font-weight: 900;
+  padding: 0 40px;
+}
+.menu a:hover{
+  text-decoration: underline;
+}
+.social{
+  left: 98%;
+  top: 50%;
+}
+.social div{
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  border-radius: 50%;
+  transition: all 0.4s;
+}
+.mail, .git, .li{
+  background-color: #FF0000;
+  background-image: url(./mail.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 25px;
+}
+.git{
+  background-color: black;
+  background-image: url(./git.png);
+}
+.li{
+  background-color: #1983BC;
+  background-image: url(./li.png);
+}
+.mail:hover, .li:hover{
+  filter: grayscale();
+}
+.git:hover{
+  filter: invert();
+}
+#animate{
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  position: absolute;
+  top: -200%;
+  transition: all 0.5s;
+  z-index: 2;
+}
+#aboutpage{
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  position: absolute;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -300%;
+  transition: all 0.5s;
+}
+.abouttext{
+  width: 30vw;
+  font-size: 30px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+}
+.skill{
+  width: 30vw;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.skillbutton{
+  height: 100%;
+  width: 10%;
+  min-width: 59px;
+  border-right: 2px solid black;
+}
+.skillbutton input {
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	border: 0;
+	overflow: hidden;
+}
+.skillbutton label {
+	color: black  ;
+	font-size: 35px;
+	text-align: center;
+	padding: 9px 18px;
+  transition: all 0.1s ease-in-out;
+  font-weight: 600;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none; 
+     -moz-user-select: none;
+      -ms-user-select: none; 
+          user-select: none;
+}
+.skillbutton label:hover{
+  cursor: pointer;
+}
+.skillbutton input:checked + label {
+  background-color: black;
+  color: white;
+	box-shadow: none;
+}
+.skillbutton div{
+  height: 100%;
+  width: 100%;
+  transform: rotate(270deg);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.detail{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  font-size: 20px;
+  font-weight: 600;
+  width: 80%;
+}
+
+@media screen and (max-width : 1200px){
+  .menu{
+    width: fit-content;
+  }
+  .menu a{
+    font-size: 25px;
+    padding: 0 15px;
+  }
+  .main h1{
+    font-size: 10vw;
+  }
+  .main div{
+    font-size: 10px;
+  }
+  .social{
+    left: 50%;
+    top: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #aboutpage{
+    flex-direction: column;
+    min-height: 100vh;
+    height: auto;
+  }
+  .abouttext{
+    width: 80vw;
+    margin: 100px 0;
+  }
+  .skillbutton div{
+    transform: rotate(0deg);
+    width: 95vw;
+  }
+  .skillbutton{
+    border-right: none;
+    margin-top: 50px;
+    width: auto;
+    border-bottom: 2px solid black;
+    height: auto;
+  }
+  .skill{
+    flex-direction: column;
+  }
+  .skillbutton label{
+    font-size: 22px;
+  }
+  .detail{
+    font-size: 18px;
+    height: auto;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 93vw;
+  }
+  .detail h2{
+    margin: 10px 0;
+  }
+  .space{
+    background-color: white;
+  }
+  .close{
+    left: 80%;
+  }
+}
