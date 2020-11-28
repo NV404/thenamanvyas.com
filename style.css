@@ -215,7 +215,7 @@ body{
   }
   .abouttext{
     width: 80vw;
-    margin: 100px 0;
+    margin: 150px 0;
   }
   .skillbutton div{
     transform: rotate(0deg);
@@ -236,10 +236,11 @@ body{
   }
   .detail{
     font-size: 18px;
-    height: auto;
+    height: auto !important;
     padding: 10px;
     margin-bottom: 10px;
     width: 93vw;
+    min-height: 498px;
   }
   .detail h2{
     margin: 10px 0;
@@ -249,5 +250,10 @@ body{
   }
   .close{
     left: 80%;
+  }
+  .social div{
+    width: 30px;
+    height: 30px;
+    background-size: 20px;
   }
 }
