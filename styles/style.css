@@ -30,6 +30,9 @@ a {
   color: currentColor;
   font-weight: bold;
 }
+a:focus-visible {
+  text-decoration: underline;
+}
 b { font-weight: 700; }
 p { font-size: 1rem; }
 p.big { font-size: 1.25rem; }
@@ -55,8 +58,8 @@ button, .btn {
   padding: 0.25rem 0.5rem;
   background-color: hsl(var(--hue), 100%, 50%);
 }
-button:focus, .btn:focus { outline: none; }
-button:focus-visible, .btn:focus-visible { transform: scale(1.05); }
+button:focus, a:focus, .btn:focus { outline: 0; }
+button:focus-visible, a:focus-visible, .btn:focus-visible { transform: scale(1.05); }
 
 .highlight { font-weight: 700; }
 
@@ -75,8 +78,7 @@ nav {
   justify-content: center;
 }
 nav > img {
-  width: 4rem;
-  height: 2rem;
+  object-fit: cover;
 }
 
 main {
