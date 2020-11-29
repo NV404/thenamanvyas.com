@@ -5,13 +5,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Portfolio site of Naman Vyas to showcase work." />
+  <link rel="shortcut icon" href="./public/logo.png" type="image/x-icon">
   <link rel="stylesheet" href="./styles/style.css" />
   <title>Naman Vyas</title>
 </head>
 
 <body>
   <nav>
-    <img src="./public/logo.png" alt="Naman Vyas" />
+    <img src="./public/logo.png" alt="Naman Vyas" width="64" height="64" />
   </nav>
   <main>
     <h6>Hey 👋, I am</h6>
@@ -19,6 +20,7 @@
     <h4>
       Web Developer.
     </h4>
+    <a href="#" class="btn">Résumé</a>
     <div id="social">
       <a href="#" class="social-item bg-gmail">
         <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -45,15 +47,62 @@
       </a>
     </div>
     <hr />
-    <p>
-      I'm Naman Vyas a <span class="highlight">developer</span> and designer, currently doing my bachelor's
-      degree from
-      <span class="highlight">Sangam
-        University</span> India. Aside from
-      developing websites, I enjoy pretty much everything related to web, tech and multimedia. That’s why I’m also
-      developing skills in software development, 3D creation, photography and game development.
-      </p>
-      </main>
+    <p class="big">
+      I'm a web-app <b>developer</b> and designer, currently pursuing my bachelor's
+      degree in computer applications from
+      <b>Sangam
+        University</b>, India. Aside from
+      developing websites, I like everything related to web, tech and multimedia. I try to keep up with everything going
+      in the tech eco-system and enjoy learning new stuffs.
+    </p>
+    <section>
+      <h4>Projects</h4>
+      <div class="card">
+        <h6>Arc Reactor</h6>
+        <div class="card-actions">
+          <a href="#" target="_blank" rel="noopener" class="card-action btn">Demo</a>
+          <a href="#" target="_blank" rel="noopener" class="card-action btn">Code</a>
+        </div>
+        <p class="card-content">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti ea voluptatem aspernatur provident sit nam,
+          fugiat nobis delectus cum voluptas perspiciatis alias qui deleniti! A consequatur ad beatae accusamus voluptatem?
+        </p>
+      </div>
+      <div class="card">
+        <h6>Blah</h6>
+        <div class="card-actions">
+          <a href="#" target="_blank" rel="noopener" class="card-action btn">Demo</a>
+          <a href="#" target="_blank" rel="noopener" class="card-action btn">Code</a>
+        </div>
+        <p class="card-content">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti ea voluptatem aspernatur provident sit nam,
+          fugiat nobis delectus cum voluptas perspiciatis alias qui deleniti! A consequatur ad beatae accusamus voluptatem?
+        </p>
+      </div>
+    </section>
+    
+    <section>
+      <h4>Education</h4>
+      <div class="card">
+        <h6>BCA</h6>
+        <p class="card-desc">From <b>Sangam University</b>, Currently in 2nd year.</p>
+      </div>
+      <div class="card">
+        <h6>Class 12</h6>
+        <p class="card-desc">Completed in 2018 with <b>70%</b></p>
+      </div>
+    </section>
+    
+    <section>
+      <div class="card card-with-bg bg-secondary">
+        For more information, Email me at,<br />
+        <a href="emailto:example@gmail.com">example@gmail.com</a>
+      </div>
+    </section>
+    </main>
+    <footer>
+      &copy; <b>Naman Vyas</b>
+    </footer>
 </body>
 
 </html>

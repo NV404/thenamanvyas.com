@@ -15,6 +15,7 @@ body {
   width: 100vw;
   min-height: 100vh;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 
   padding: 0rem 5vw;
 
@@ -27,8 +28,14 @@ body {
 a {
   text-decoration: none;
   color: currentColor;
+  font-weight: bold;
 }
-p { font-size: 1.25rem; }
+a:focus-visible {
+  text-decoration: underline;
+}
+b { font-weight: 700; }
+p { font-size: 1rem; }
+p.big { font-size: 1.25rem; }
 h1, h2, h3, h4, h5, h6 { line-height: 1; margin-bottom: 0.5rem; }
 h1 { font-size: 4rem; }
 h2 { font-size: 3.5rem; }
@@ -38,11 +45,31 @@ h5 { font-size: 2rem; }
 h6 { font-size: 1.5rem; }
 hr { border: none; width: 80%; height: 0.25rem; margin: 1rem 0; background-color: hsl(0, 0%, 10%); }
 
+.bg-secondary {
+  background-color: hsl(var(--hue), 100%, 85%);
+}
+
+button, .btn {
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  color: currentColor;
+  padding: 0.25rem 0.5rem;
+  background-color: hsl(var(--hue), 100%, 50%);
+}
+button:focus, a:focus, .btn:focus { outline: 0; }
+button:focus-visible, a:focus-visible, .btn:focus-visible { transform: scale(1.05); }
+
 .highlight { font-weight: 700; }
 
 body > * {
   width: 100%;
   padding: 2.5rem 5vw;
+}
+
+body > * + * {
+  padding-top: 0;
 }
 
 nav {
@@ -51,13 +78,10 @@ nav {
   justify-content: center;
 }
 nav > img {
-  width: 4rem;
-  height: 2rem;
+  object-fit: cover;
 }
 
 main {
-  padding-top: 0;
-
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -95,3 +119,36 @@ main > #social > .social-item > svg {
   width: 1rem;
   height: 1rem;
 }
+main > section {
+  width: 100%;
+  padding: 2rem 0;
+}
+main > section + section {
+  padding-top: 0;
+}
+
+.card {
+  padding: 1rem 0;
+}
+.card-with-bg {
+  padding: 1rem;
+}
+.card + .card {
+  padding-top: 0;
+}
+.card > *:not(h6) {
+  padding: 0.25rem 0;
+}
+.card-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+/* .card-actions > .card-action {} */
+.card-actions > .card-action + .card-action {
+  margin-left: 0.25rem;
+}
+.card-desc {
+  color: hsl(0, 0%, 30%);
+}
+/* .card-content {} */
